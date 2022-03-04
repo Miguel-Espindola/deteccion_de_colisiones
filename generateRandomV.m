@@ -8,7 +8,7 @@ function varargout = generateRandomV(n)
     num = numel(nrand); % calculo del numero de elementos
     res = mat2cell(nrand,diff([0:bs:num-1,num]));
     for j = 1:size(res)
-        varargout{j} = res{j};
+        varargout{j} = res{j}';
     end
 end
 

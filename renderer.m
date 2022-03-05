@@ -1,5 +1,5 @@
 function renderer(f)
-%RENDERER: render the scen when you pas a frame
+%RENDERER: render the scen when you pass a frame
 %   drawnow updates the changes and the boundries of the scen is a square
 %   of 20,20 
     drawnow

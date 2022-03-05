@@ -1,14 +1,14 @@
 classdef triangle
-    %TRIANGLE Summary of this class goes here
-    %   Detailed explanation goes here
-    
+    %TRIANGLE create a triangle
+    %   This class has all the data needed to create a triangle with the
+    %   polyshape function and a property called polygon to store it
     properties (Constant)
         xdata = [0 0.5 1];
         ydata = [0 1 0];
-        color = 'red';
         mass = 1;
     end
-    
-   
+    properties
+       polygon 
+    end
 end
 

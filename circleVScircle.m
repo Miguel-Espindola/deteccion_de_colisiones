@@ -1,4 +1,4 @@
-function [collision,v] = circlevscircle(c1,v1,c2,v2)
+function [collision,v] = circleVScircle(c1,v1,c2,v2)
 %CIRCLEVSCIRCLE detect collisions between circles of the circle class if
 %detected this function calls the corresponding functions to solve it
 %depending on the case
@@ -10,18 +10,23 @@ function [collision,v] = circlevscircle(c1,v1,c2,v2)
             [cx1,cy1] = centroid(c1.polygon);
             if cx1+1 >= 10 
                 collision = true;% circle 1 is colliding with the x axis in the right
-                correction = -1;
+                correction = 1;
                 v = solveCircleCollisionWithAxis(v1,correction);
             elseif cx1-1 <= -10
                 collision = true; % circle 1 is colliding with the x axis in the left
-                correction = 1;
+                correction = -1;
                 v = solveCircleCollisionWithAxis(v1,correction);
             elseif  cy1+1 >= 10 
-                collision = true; % circle 1 is colliding with the y axis up
-            elseif cy1-1 <-10
-                collision = true; % circle 1 is colliding with the y axis down
+                collision = true;
+                correction = 2;
+                v = solveCircleCollisionWithAxis(v1,correction);% circle 1 is colliding with the y axis up
+            elseif cy1-1 <=-10
+                correction = -2;
+                collision = true;
+                v = solveCircleCollisionWithAxis(v1,correction); % circle 1 is colliding with the y axis down
             else
-                collision = false; % no collision was detected
+                collision = false;
+                v = v1;                    % no collision was detected
             end
         case 3
             error('not enough input arguments, maybe velocity or polyshape missing')
@@ -41,4 +46,3 @@ function [collision,v] = circlevscircle(c1,v1,c2,v2)
             end
     end
 end
-

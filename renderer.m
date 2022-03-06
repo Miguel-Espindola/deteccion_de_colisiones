@@ -4,10 +4,10 @@ function renderer(f)
 %   of 20,20 
     drawnow
     plot(f);
-    axis equal
+    xline([-10,10],'k')
+    yline([-10,10],'k')
+    axis off
     xlim([-10,10]);
     ylim([-10,10]);
-    grid on
-
 end
 

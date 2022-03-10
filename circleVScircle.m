@@ -8,22 +8,22 @@ function [collision,v] = circleVScircle(c1,v1,c2,v2)
             error('not enough input arguments, maybe velocity or polyshape missing')
         case 2
             [cx1,cy1] = centroid(c1.polygon);
-            if cx1+1 >= 10 
+            if cx1+c1.r > 10 
                 collision = true;% circle 1 is colliding with the x axis in the right
                 correction = 1;
-                v = solveCircleCollisionWithAxis(v1,correction);
-            elseif cx1-1 <= -10
+                v = solveCircleCollisionWithAxis(c1,v1,cx1,correction);
+            elseif cx1-c1.r < -10
                 collision = true; % circle 1 is colliding with the x axis in the left
                 correction = -1;
-                v = solveCircleCollisionWithAxis(v1,correction);
-            elseif  cy1+1 >= 10 
+                v = solveCircleCollisionWithAxis(c1,v1,cx1,correction);
+            elseif  cy1+c1.r > 10 
                 collision = true;
                 correction = 2;
-                v = solveCircleCollisionWithAxis(v1,correction);% circle 1 is colliding with the y axis up
-            elseif cy1-1 <=-10
+                v = solveCircleCollisionWithAxis(c1,v1,cy1,correction);% circle 1 is colliding with the y axis up
+            elseif cy1-c1.r <-10
                 correction = -2;
                 collision = true;
-                v = solveCircleCollisionWithAxis(v1,correction); % circle 1 is colliding with the y axis down
+                v = solveCircleCollisionWithAxis(c1,v1,cy1,correction); % circle 1 is colliding with the y axis down
             else
                 collision = false;
                 v = v1;                    % no collision was detected

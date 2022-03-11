@@ -33,13 +33,13 @@ function [collision,v] = circleVScircle(c1,v1,c2,v2)
         case 4
             [cx1,cy1] = centroid(c1.polygon);
             [cx2,cy2] = centroid(c2.polygon);
-            if cx1+1 >=10 || cx1-1 <= -10
+            if cx1+c1.r >10 || cx1-c1.r < -10
                 collision = true; % circle 1 is colliding with the x axis
-            elseif cx2 + 1 >= 10 || cx2-1 <= -10
+            elseif cx2 + c1.r > 10 || cx2-c1.r < -10
                 collision = true; % circle 2 is colliding with the x axis
-            elseif  cy1+1 >= 10 || cy1-1 <-10
+            elseif  cy1+c1.r > 10 || cy1-c1.r <-10
                 collision = true; % circle 1 is colliding with the y axis
-            elseif cy2+1 >=10 ||  cy2-1 <=-10
+            elseif cy2+c2.r > 10 ||  cy2-c2.r <-10
                 collision = true; % circle 2 is colliding with the y axis
             else
                 collision = false; % no collision was detected

@@ -17,12 +17,15 @@ function [collision,v] = detectCollision(p1,v1,p2,v2)
             if class(p1) == "circle" && class(p2) == "circle"
                 %% pasar a la funcion colision circle vs cirle
 %                 collision = circlevscircle(p1,v1,p2,v2);
+                [collision,v] = circleVScircle(p1,v1,p2,v2);
+
             elseif class(p1) == "circle" || class(p2) == "circle"
                 %% pasar a la funcion poligono vs circle
-                disp('circulo vs poligono')
+                [collision,v] = circleVSpolygon(p1,v1,p2,v2);
+                
             else
                 % pasar a la funcion poligono vs poligonoS
-                disp('poligono vs poligono')
+                [collision,v] = polygonVSpolygon(p1,v1,p2,v2);
             end
     end
 

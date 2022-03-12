@@ -11,7 +11,7 @@ classdef circle
         mass = 1;
     end
     properties
-       polygon 
+       polygon = polyshape(circle.xdata,circle.ydata);
     end
 end
 

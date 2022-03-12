@@ -2,7 +2,7 @@ function [collision,v] = circleVScircle(c1,v1,c2,v2)
 %CIRCLEVSCIRCLE detect collisions between circles of the circle class if
 %detected this function calls the corresponding functions to solve it
 %depending on the case
-%   Detailed explanation goes here
+%   
     switch nargin
         case 1
             error('not enough input arguments, maybe velocity or polyshape missing')

@@ -6,6 +6,7 @@ classdef square
         xdata = [0 0 1 1];
         ydata = [0 1 1 0];
         mass = 1;
+        n = 4;
     end
     properties
        polygon 

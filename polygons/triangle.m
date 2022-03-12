@@ -5,6 +5,7 @@ classdef triangle
     properties (Constant)
         xdata = [0 0.5 1];
         ydata = [0 1 0];
+        n = 3;
         mass = 1;
     end
     properties

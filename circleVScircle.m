@@ -4,14 +4,17 @@ function collision = circleVScircle(c1,c2)
 %depending on the case
     switch nargin
         case 1
-            collision = circlePosition(c1,10);
+            points = circlePosition(c1);
+            collision = isBoundingExceeded(points,10);
         case 2
-            collision1 = circlePosition(c1,10);
-            collision2 = circlePosition(c2,10);
-            if collision1 == true || collision2 == true
+            points1 = circlePosition(c1);
+            points2 = circlePosition(c2);
+            if isBoundingExceeded(points1,10) == true
+                collision = true;
+            elseif isBoundingExceeded(points2,10) == true
                 collision = true;
             else
                 collision = false;
-            end          
+            end
     end
 end

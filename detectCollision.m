@@ -6,7 +6,7 @@ function collision = detectCollision(p1,p2)
                 collision = circleVScircle(p1);
             else
                 % pasar a la funcion poligono vs poligonoS
-                disp('poligono vs poligono')
+                collision = polygonVSpolygon(p1);
             end
 
         case 2

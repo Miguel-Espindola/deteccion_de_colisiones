@@ -9,7 +9,7 @@ classdef triangle
         mass = 1;
     end
     properties
-       polygon 
+       polygon = polyshape(triangle.xdata,triangle.ydata);
     end
 end
 

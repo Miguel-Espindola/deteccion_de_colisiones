@@ -9,7 +9,7 @@ classdef square
         n = 4;
     end
     properties
-       polygon 
+       polygon = polyshape(square.xdata,square.ydata);
     end
 end
 

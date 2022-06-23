@@ -7,6 +7,8 @@ El proyecto funciona de la siguiente forma.
  ## 1
  
 En la carpeta polygons se define cualquier polígono que quieras, en este momento solo hay triángulos, cuadrados y círculos.
+
+
 ![image 12](https://user-images.githubusercontent.com/70829743/175220846-fb2e6c27-7c20-4107-9b44-fdd0f8ab7971.png)
 
 

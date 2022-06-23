@@ -32,7 +32,7 @@ y devuelve 2n valores de posición y velocidad
 ## 4
 
 Se crea un for loop donde se está ejecutando la animación.
-Dentro de este bucle se ira actualizando frame por frame la posición de los polígonos y con cada actualización se checará si hubo una colisión.
+Dentro de este ciclo se ira actualizando frame por frame la posición de los polígonos y con cada actualización se checará si hubo una colisión.
 
 Para mover los polígonos a lo largo de la escena se utiliza la función translate, la cual mueve todos los puntos de una polyshape de una ubicación a otra.
 Para detectar las colisiones, se usa la función detectCollision, la cual toma como argumento de entrad ambos polígonos y devuelve un true o false si es que 

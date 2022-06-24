@@ -106,3 +106,20 @@ for i = linspace(0,2,60)
 end
 ```
 
+
+## Logros
+
+En el archivo de test pueden ver mi primer intento por lograr esta tarea, son 55 líneas de codigo medio estructuradas y difíciles de entender, ademas cada que quería cambiar de polígono o agregar uno más se convierte en un dolor de cabeza refactorizar el codigo, en conclusión, era un codigo spaghetti.
+
+
+Me siento muy orgulloso de haber reducido todo ese archivo a algo que se puede implementar en 15 líneas y es escalable.
+
+
+## Achievements
+
+In the test1 file, you can see my first attempt at doing this task. I write 55 lines of code that are half-structured and difficult to understand, besides every time I wanted to change the polygon or add one more, it becomes a headache to refactor the code.
+
+ In conclusion, it was a spaghetti code.
+ 
+ I am very proud that I have reduced all that file to something that can be implemented in 15 lines and is scalable.
+ 
